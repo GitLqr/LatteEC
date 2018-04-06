@@ -19,8 +19,10 @@ android {
 }
 
 dependencies {
-    implementation fileTree(include: ['*.jar'], dir: 'libs')
-    implementation 'com.android.support:appcompat-v7:26.1.0'
-    implementation project(':latte-ec')
+    // 系统依赖
+    api fileTree(include: ['*.jar'], dir: 'libs')
+
+    // 模块依赖
+    api project(':latte-ec')
     annotationProcessor project(':latte-compiler')
 }
