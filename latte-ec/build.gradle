@@ -23,8 +23,8 @@ android {
 
 dependencies {
     // 系统依赖
-    api fileTree(include: ['*.jar'], dir: 'libs')
+    compile fileTree(include: ['*.jar'], dir: 'libs')
 
     // 模块依赖
-    api project(':latte-core')
+    compile project(':latte-core')
 }

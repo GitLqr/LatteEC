@@ -3,7 +3,6 @@ package com.lqr.latte.core.app;
 import android.content.Context;
 
 import java.util.HashMap;
-import java.util.WeakHashMap;
 
 
 /**
@@ -17,7 +16,7 @@ public class Latte {
         return Configurator.getInstance();
     }
 
-    private static HashMap<String,Object> getConfigurations(){
+    public static HashMap<String,Object> getConfigurations(){
         return Configurator.getInstance().getLatteConfigs();
     }
 
