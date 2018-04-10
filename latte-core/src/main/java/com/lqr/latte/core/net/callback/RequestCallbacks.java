@@ -44,7 +44,7 @@ public class RequestCallbacks implements Callback<String> {
     @Override
     public void onFailure(Call<String> call, Throwable t) {
         if (FAILURE != null) {
-            FAILURE.onFailure();
+            FAILURE.onFailure(t == null ? "" : t.getMessage());
         }
         callRequestEnd();
         stopLoading();

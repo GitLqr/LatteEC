@@ -71,7 +71,7 @@ public class DownloadHandler {
             @Override
             public void onFailure(Call<ResponseBody> call, Throwable t) {
                 if (FAILURE != null) {
-                    FAILURE.onFailure();
+                    FAILURE.onFailure(t == null ? "" : t.getMessage());
                 }
             }
         });

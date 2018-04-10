@@ -8,5 +8,7 @@ public enum ConfigType {
     API_HOST, // 网络请求的 api host
     APPLICATION_CONTEXT, // 全局上下文
     CONFIG_READY, // 是否配置完毕标记
-    ICON,
+    ICON, // iconify
+    LOADER_DELAYED,
+    INTERCEPTOR, //拦截器
 }
