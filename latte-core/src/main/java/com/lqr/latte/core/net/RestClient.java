@@ -160,7 +160,7 @@ public class RestClient {
         request(HttpMethod.UPLOAD);
     }
 
-    public final void download() {
+    public void download() {
         new DownloadHandler(URL, REQUEST, SUCCESS, FAILURE, ERROR, DOWNLOAD_DIR, EXTENSION, NAME).handleDownload();
     }
 }
