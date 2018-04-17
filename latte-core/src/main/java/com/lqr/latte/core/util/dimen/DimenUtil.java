@@ -1,4 +1,4 @@
-package com.lqr.latte.core.util;
+package com.lqr.latte.core.util.dimen;
 
 
 import android.content.res.Resources;

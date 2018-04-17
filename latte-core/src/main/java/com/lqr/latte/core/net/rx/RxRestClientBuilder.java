@@ -3,7 +3,7 @@ package com.lqr.latte.core.net.rx;
 import android.content.Context;
 
 import com.lqr.latte.core.net.RestCreator;
-import com.lqr.latte.core.ui.LoaderStyle;
+import com.lqr.latte.core.ui.loader.LoaderStyle;
 
 import java.io.File;
 import java.util.WeakHashMap;

@@ -1,7 +1,7 @@
 package com.lqr.latte.core.net.callback;
 
-import com.lqr.latte.core.ui.LatteLoader;
-import com.lqr.latte.core.ui.LoaderStyle;
+import com.lqr.latte.core.ui.loader.LatteLoader;
+import com.lqr.latte.core.ui.loader.LoaderStyle;
 
 import retrofit2.Call;
 import retrofit2.Callback;

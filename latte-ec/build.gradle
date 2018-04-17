@@ -1,4 +1,5 @@
 apply plugin: 'com.android.library'
+apply plugin: 'com.jakewharton.butterknife'
 
 android {
     compileSdkVersion 26
@@ -24,7 +25,8 @@ android {
 dependencies {
     // 系统依赖
     compile fileTree(include: ['*.jar'], dir: 'libs')
-
+    // 多模块依赖ButterKnife必须添加该processor，否则找不到R2
+    annotationProcessor 'com.jakewharton:butterknife-compiler:8.5.0'
     // 模块依赖
     compile project(':latte-core')
 }

@@ -9,8 +9,8 @@ import com.lqr.latte.core.net.callback.IRequest;
 import com.lqr.latte.core.net.callback.ISuccess;
 import com.lqr.latte.core.net.callback.RequestCallbacks;
 import com.lqr.latte.core.net.download.DownloadHandler;
-import com.lqr.latte.core.ui.LatteLoader;
-import com.lqr.latte.core.ui.LoaderStyle;
+import com.lqr.latte.core.ui.loader.LatteLoader;
+import com.lqr.latte.core.ui.loader.LoaderStyle;
 
 import java.io.File;
 import java.util.Map;

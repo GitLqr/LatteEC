@@ -6,7 +6,7 @@ import com.lqr.latte.core.net.callback.IError;
 import com.lqr.latte.core.net.callback.IFailure;
 import com.lqr.latte.core.net.callback.IRequest;
 import com.lqr.latte.core.net.callback.ISuccess;
-import com.lqr.latte.core.ui.LoaderStyle;
+import com.lqr.latte.core.ui.loader.LoaderStyle;
 
 import java.io.File;
 import java.util.WeakHashMap;

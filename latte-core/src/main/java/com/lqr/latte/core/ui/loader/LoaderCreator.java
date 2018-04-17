@@ -1,4 +1,4 @@
-package com.lqr.latte.core.ui;
+package com.lqr.latte.core.ui.loader;
 
 
 import android.content.Context;
