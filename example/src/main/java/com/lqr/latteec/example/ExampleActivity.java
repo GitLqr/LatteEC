@@ -10,6 +10,7 @@ import com.lqr.latte.core.delegates.LatteDelegate;
 import com.lqr.latte.ec.launcher.ILauncherListener;
 import com.lqr.latte.ec.launcher.LauncherDelegate;
 import com.lqr.latte.ec.launcher.OnLauncherFinishTag;
+import com.lqr.latte.ec.main.EcBottomDelegate;
 import com.lqr.latte.ec.sign.ISignListener;
 import com.lqr.latte.ec.sign.SignInDelegate;
 
@@ -45,11 +46,12 @@ public class ExampleActivity extends ProxyActivity implements ISignListener, ILa
     public void onLauncherFinish(OnLauncherFinishTag tag) {
         switch (tag) {
             case SIGNED:
-                Toast.makeText(getApplicationContext(),"用户登录了",Toast.LENGTH_SHORT).show();
-                startWithPop(new ExampleDelegate());
+                Toast.makeText(getApplicationContext(), "用户登录了", Toast.LENGTH_SHORT).show();
+                startWithPop(new EcBottomDelegate());
+//                startWithPop(new ExampleDelegate());
                 break;
             case NOT_SIGNED:
-                Toast.makeText(getApplicationContext(),"用户还未登录",Toast.LENGTH_SHORT).show();
+                Toast.makeText(getApplicationContext(), "用户还未登录", Toast.LENGTH_SHORT).show();
                 startWithPop(new SignInDelegate());
                 break;
             default:

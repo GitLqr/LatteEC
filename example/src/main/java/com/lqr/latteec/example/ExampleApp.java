@@ -8,7 +8,6 @@ import com.lqr.latte.core.app.Latte;
 import com.lqr.latte.core.net.interceptor.DebugInterceptor;
 import com.lqr.latte.ec.database.DatabaseManager;
 import com.lqr.latte.ec.icon.FontEcModule;
-import com.lqr.latteec.R;
 
 /**
  * 创建者：CSDN_LQR
