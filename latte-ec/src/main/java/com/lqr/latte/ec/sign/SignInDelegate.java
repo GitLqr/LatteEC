@@ -13,6 +13,8 @@ import com.lqr.latte.core.delegates.LatteDelegate;
 import com.lqr.latte.core.net.RestClient;
 import com.lqr.latte.core.net.callback.ISuccess;
 import com.lqr.latte.core.util.log.LatteLogger;
+import com.lqr.latte.core.wechat.LatteWeChat;
+import com.lqr.latte.core.wechat.callbacks.IWeChatSignInCallback;
 import com.lqr.latte.ec.R;
 import com.lqr.latte.ec.R2;
 
@@ -39,7 +41,7 @@ public class SignInDelegate extends LatteDelegate {
     @Override
     public void onAttach(Activity activity) {
         super.onAttach(activity);
-        if(activity instanceof ISignListener){
+        if (activity instanceof ISignListener) {
             mSignListener = (ISignListener) activity;
         }
     }
@@ -90,8 +92,13 @@ public class SignInDelegate extends LatteDelegate {
     }
 
     @OnClick(R2.id.icon_sign_in_wechat)
-    void onClickWechat(){
+    void onClickWechat() {
+        LatteWeChat.getInstance().onSignInCallback(new IWeChatSignInCallback() {
+            @Override
+            public void onSignInSuccess(String userInfo) {
 
+            }
+        }).signIn();
     }
 
     @Override

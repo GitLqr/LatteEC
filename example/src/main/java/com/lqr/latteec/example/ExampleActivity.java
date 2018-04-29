@@ -1,4 +1,4 @@
-package com.lqr.latteec;
+package com.lqr.latteec.example;
 
 import android.os.Bundle;
 import android.support.annotation.Nullable;
@@ -8,9 +8,10 @@ import android.widget.Toast;
 import com.lqr.latte.core.activities.ProxyActivity;
 import com.lqr.latte.core.delegates.LatteDelegate;
 import com.lqr.latte.ec.launcher.ILauncherListener;
+import com.lqr.latte.ec.launcher.LauncherDelegate;
 import com.lqr.latte.ec.launcher.OnLauncherFinishTag;
 import com.lqr.latte.ec.sign.ISignListener;
-import com.lqr.latte.ec.sign.SignUpDelegate;
+import com.lqr.latte.ec.sign.SignInDelegate;
 
 public class ExampleActivity extends ProxyActivity implements ISignListener, ILauncherListener {
 
@@ -25,8 +26,8 @@ public class ExampleActivity extends ProxyActivity implements ISignListener, ILa
 
     @Override
     public LatteDelegate setRootDelegate() {
-        return new SignUpDelegate();
-//        return new LauncherDelegate();
+//        return new SignUpDelegate();
+        return new LauncherDelegate();
 //        return new LauncherScrollDelegate();
     }
 
@@ -49,7 +50,7 @@ public class ExampleActivity extends ProxyActivity implements ISignListener, ILa
                 break;
             case NOT_SIGNED:
                 Toast.makeText(getApplicationContext(),"用户还未登录",Toast.LENGTH_SHORT).show();
-                startWithPop(new SignUpDelegate());
+                startWithPop(new SignInDelegate());
                 break;
             default:
                 break;

@@ -1,4 +1,4 @@
-package com.lqr.latteec;
+package com.lqr.latteec.example;
 
 import android.os.Bundle;
 import android.support.annotation.Nullable;
@@ -14,6 +14,7 @@ import com.lqr.latte.core.net.callback.IFailure;
 import com.lqr.latte.core.net.callback.IRequest;
 import com.lqr.latte.core.net.callback.ISuccess;
 import com.lqr.latte.core.net.rx.RxRestClient;
+import com.lqr.latteec.R;
 
 import io.reactivex.Observer;
 import io.reactivex.android.schedulers.AndroidSchedulers;

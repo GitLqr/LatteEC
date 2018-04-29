@@ -1,4 +1,4 @@
-package com.lqr.latteec;
+package com.lqr.latteec.example;
 
 import android.app.Application;
 
@@ -8,6 +8,7 @@ import com.lqr.latte.core.app.Latte;
 import com.lqr.latte.core.net.interceptor.DebugInterceptor;
 import com.lqr.latte.ec.database.DatabaseManager;
 import com.lqr.latte.ec.icon.FontEcModule;
+import com.lqr.latteec.R;
 
 /**
  * 创建者：CSDN_LQR
@@ -23,6 +24,8 @@ public class ExampleApp extends Application {
                 .withIcon(new FontEcModule())
                 .withApiHost("http://127.0.0.1/")
                 .withInterceptor(new DebugInterceptor("index", R.raw.test))
+                .withWeChatAppId("")
+                .withWeChatAppSecret("")
                 .configure();
         initStetho();
         DatabaseManager.getInstance().init(getApplicationContext());
