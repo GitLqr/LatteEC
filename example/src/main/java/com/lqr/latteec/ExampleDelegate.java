@@ -21,7 +21,7 @@ import io.reactivex.disposables.Disposable;
 import io.reactivex.schedulers.Schedulers;
 
 
-public class ExampleFragment extends LatteDelegate {
+public class ExampleDelegate extends LatteDelegate {
     @Override
     public Object setLayout() {
         return R.layout.delegate_fragment;

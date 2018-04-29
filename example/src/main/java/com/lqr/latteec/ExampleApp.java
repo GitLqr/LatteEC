@@ -2,9 +2,11 @@ package com.lqr.latteec;
 
 import android.app.Application;
 
+import com.facebook.stetho.Stetho;
 import com.joanzapata.iconify.fonts.FontAwesomeModule;
 import com.lqr.latte.core.app.Latte;
 import com.lqr.latte.core.net.interceptor.DebugInterceptor;
+import com.lqr.latte.ec.database.DatabaseManager;
 import com.lqr.latte.ec.icon.FontEcModule;
 
 /**
@@ -22,5 +24,22 @@ public class ExampleApp extends Application {
                 .withApiHost("http://127.0.0.1/")
                 .withInterceptor(new DebugInterceptor("index", R.raw.test))
                 .configure();
+        initStetho();
+        DatabaseManager.getInstance().init(getApplicationContext());
+    }
+
+    /**
+     * 初始化Stetho
+     * <p>
+     * 打开Chrome输入： chrome://inspect
+     */
+    private void initStetho() {
+        Stetho.initializeWithDefaults(this);
+        Stetho.initialize(
+                Stetho.newInitializerBuilder(this)
+                        .enableDumpapp(Stetho.defaultDumperPluginsProvider(this))
+                        .enableWebKitInspector(Stetho.defaultInspectorModulesProvider(this))
+                        .build()
+        );
     }
 }

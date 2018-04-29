@@ -25,10 +25,13 @@ android {
 dependencies {
     // 系统依赖
     compile fileTree(include: ['*.jar'], dir: 'libs')
-    compile 'com.android.support:appcompat-v7:26.1.0'
     testCompile 'junit:junit:4.12'
     androidTestCompile 'com.android.support.test:runner:1.0.1'
     androidTestCompile 'com.android.support.test.espresso:espresso-core:3.0.1'
+    // Android Support包
+    compile 'com.android.support:support-v4:26.1.0'
+    compile 'com.android.support:appcompat-v7:26.1.0'
+    compile 'com.android.support:design:26.1.0'
 
     // 模块依赖
     compile project(':latte-annotations')
@@ -59,4 +62,9 @@ dependencies {
     compile 'com.ToxicBakery.viewpager.transforms:view-pager-transforms:1.2.32@aar'
     // ======================== Json ========================
     compile 'com.alibaba:fastjson:1.2.31'
+    // ======================== Log ========================
+    compile 'com.orhanobut:logger:1.15'
+    // ======================== GreenDao ========================
+    compile 'org.greenrobot:greendao-generator:3.2.0'
+    compile 'org.greenrobot:greendao:3.2.0'
 }

@@ -25,4 +25,8 @@ dependencies {
     // 模块依赖
     compile project(':latte-ec')
     annotationProcessor project(':latte-compiler')
+
+    // stetho
+    compile 'com.facebook.stetho:stetho:1.5.0'
+    compile 'com.facebook.stetho:stetho-okhttp3:1.5.0'
 }
