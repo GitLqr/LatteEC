@@ -23,6 +23,8 @@ public class ExampleApp extends Application {
                 .withIcon(new FontEcModule())
                 .withApiHost("http://127.0.0.1/")
                 .withInterceptor(new DebugInterceptor("index", R.raw.test))
+                .withInterceptor(new DebugInterceptor("sort_list.php", R.raw.sort_list))
+                .withInterceptor(new DebugInterceptor("sort_content_list.php", R.raw.sort_content_data_1))
                 .withWeChatAppId("")
                 .withWeChatAppSecret("")
                 .configure();

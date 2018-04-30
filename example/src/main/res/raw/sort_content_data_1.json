@@ -1,0 +1,94 @@
+{
+  "code": 0,
+  "message": "OK",
+  "data": [
+    {
+      "id": 1,
+      "section": "标题1",
+      "goods": [
+        {
+          "goods_id": 3,
+          "goods_thumb": "http://img1.imgtn.bdimg.com/it/u=2875653198,2481124055&fm=27&gp=0.jpg",
+          "goods_name": "品牌1"
+        },
+        {
+          "goods_id": 4,
+          "goods_thumb": "http://img3.imgtn.bdimg.com/it/u=2187444312,900292689&fm=27&gp=0.jpg",
+          "goods_name": "品牌2"
+        },
+        {
+          "goods_id": 5,
+          "goods_thumb": "http://img1.imgtn.bdimg.com/it/u=460706872,2997178095&fm=27&gp=0.jpg",
+          "goods_name": "品牌3"
+        },
+        {
+          "goods_id": 6,
+          "goods_thumb": "http://img0.imgtn.bdimg.com/it/u=1811636986,3661865052&fm=27&gp=0.jpg",
+          "goods_name": "品牌4"
+        }
+      ]
+    },
+    {
+      "id": 2,
+      "section": "标题2",
+      "goods": [
+        {
+          "goods_id": 3,
+          "goods_thumb": "http://img3.imgtn.bdimg.com/it/u=43825416,2732775573&fm=27&gp=0.jpg",
+          "goods_name": "品牌1"
+        },
+        {
+          "goods_id": 4,
+          "goods_thumb": "http://img3.imgtn.bdimg.com/it/u=2485406124,1894724389&fm=200&gp=0.jpg",
+          "goods_name": "品牌2"
+        },
+        {
+          "goods_id": 5,
+          "goods_thumb": "http://img4.imgtn.bdimg.com/it/u=919673108,713933726&fm=200&gp=0.jpg",
+          "goods_name": "品牌3"
+        },
+        {
+          "goods_id": 6,
+          "goods_thumb": "http://img4.imgtn.bdimg.com/it/u=1299920505,1260358615&fm=200&gp=0.jpg",
+          "goods_name": "品牌4"
+        }
+      ]
+    },
+    {
+      "id": 3,
+      "section": "标题3",
+      "goods": [
+        {
+          "goods_id": 1,
+          "goods_thumb": "http://img0.imgtn.bdimg.com/it/u=3491373869,3618786179&fm=200&gp=0.jpg",
+          "goods_name": "品牌1"
+        },
+        {
+          "goods_id": 2,
+          "goods_thumb": "http://img3.imgtn.bdimg.com/it/u=1008125959,115372976&fm=200&gp=0.jpg",
+          "goods_name": "品牌1"
+        },
+        {
+          "goods_id": 3,
+          "goods_thumb": "http://img3.imgtn.bdimg.com/it/u=2851444697,1735806542&fm=27&gp=0.jpg",
+          "goods_name": "品牌3"
+        },
+        {
+          "goods_id": 4,
+          "goods_thumb": "http://img4.imgtn.bdimg.com/it/u=796408123,1885819401&fm=27&gp=0.jpg",
+          "goods_name": "品牌4"
+        },
+        {
+          "goods_id": 5,
+          "goods_thumb": "http://img4.imgtn.bdimg.com/it/u=1315560124,2326300362&fm=27&gp=0.jpg",
+          "goods_name": "品牌5"
+        },
+        {
+          "goods_id": 6,
+          "goods_thumb": "http://img0.imgtn.bdimg.com/it/u=3034550788,1048580024&fm=200&gp=0.jpg",
+          "goods_name": "品牌6"
+        }
+      ]
+    }
+  ]
+}
