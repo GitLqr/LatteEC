@@ -9,6 +9,7 @@ import com.lqr.latte.core.activities.ProxyActivity;
 import com.lqr.latte.core.app.Latte;
 import com.lqr.latte.core.delegates.LatteDelegate;
 import com.lqr.latte.ec.launcher.ILauncherListener;
+import com.lqr.latte.ec.launcher.LauncherDelegate;
 import com.lqr.latte.ec.launcher.OnLauncherFinishTag;
 import com.lqr.latte.ec.main.EcBottomDelegate;
 import com.lqr.latte.ec.sign.ISignListener;
@@ -31,20 +32,22 @@ public class ExampleActivity extends ProxyActivity implements ISignListener, ILa
 
     @Override
     public LatteDelegate setRootDelegate() {
-        return new EcBottomDelegate();
-//        return new SignUpDelegate();
-//        return new LauncherDelegate();
+//        return new EcBottomDelegate();
+        return new LauncherDelegate();
 //        return new LauncherScrollDelegate();
+//        return new SignUpDelegate();
     }
 
     @Override
     public void onSignInSuccess() {
         Toast.makeText(getApplicationContext(), "登录成功", Toast.LENGTH_SHORT).show();
+        loadRootFragment(R.id.delegate_container, new EcBottomDelegate());
     }
 
     @Override
     public void onSignUpSuccess() {
         Toast.makeText(getApplicationContext(), "注册成功", Toast.LENGTH_SHORT).show();
+        loadRootFragment(R.id.delegate_container, new EcBottomDelegate());
     }
 
     @Override
