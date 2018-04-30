@@ -63,8 +63,7 @@ public class IndexDelegate extends BottomItemDelegate {
         super.onLazyInitView(savedInstanceState);
         initRefreshLayout();
         initRecyclerView();
-        // TODO: 2018/4/30 暂时关闭数据请求
-//        mRefreshHandler.firstPage("index.php");
+        mRefreshHandler.firstPage("index.php");
     }
 
     @Override

@@ -59,6 +59,7 @@ public class VerticalListDelegate extends LatteDelegate {
                         mRvList.setAdapter(adapter);
                     }
                 })
+                .loader(getContext())
                 .build()
                 .get();
     }

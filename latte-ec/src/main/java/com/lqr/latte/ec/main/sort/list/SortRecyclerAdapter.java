@@ -12,8 +12,11 @@ import com.lqr.latte.core.ui.recycler.MultipleRecyclerAdapter;
 import com.lqr.latte.core.ui.recycler.MultipleViewHolder;
 import com.lqr.latte.ec.R;
 import com.lqr.latte.ec.main.sort.SortDelegate;
+import com.lqr.latte.ec.main.sort.content.ContentDelegate;
 
 import java.util.List;
+
+import me.yokeyword.fragmentation.SupportHelper;
 
 /**
  * Created by lqr on 2018/4/30.
@@ -56,6 +59,7 @@ public class SortRecyclerAdapter extends MultipleRecyclerAdapter {
                             mPrePosition = currentPosition;
 
                             final int contentId = getData().get(currentPosition).getField(MultipleFields.ID);
+                            showContent(contentId);
                         }
                     }
                 });
@@ -73,6 +77,18 @@ public class SortRecyclerAdapter extends MultipleRecyclerAdapter {
                 break;
             default:
                 break;
+        }
+    }
+
+    private void showContent(int contentId) {
+        final ContentDelegate delegate = ContentDelegate.newInstance(contentId);
+        switchContent(delegate);
+    }
+
+    private void switchContent(ContentDelegate delegate) {
+        final ContentDelegate contentDelegate = SupportHelper.findFragment(DELEGATE.getChildFragmentManager(), ContentDelegate.class);
+        if (contentDelegate != null) {
+            contentDelegate.getSupportDelegate().replaceFragment(delegate, false);
         }
     }
 }

@@ -1,5 +1,9 @@
 package com.lqr.latte.core.net.callback;
 
+import android.os.Handler;
+
+import com.lqr.latte.core.app.ConfigType;
+import com.lqr.latte.core.app.Latte;
 import com.lqr.latte.core.ui.loader.LatteLoader;
 import com.lqr.latte.core.ui.loader.LoaderStyle;
 
@@ -15,6 +19,7 @@ public class RequestCallbacks implements Callback<String> {
     private final IFailure FAILURE;
     private final IError ERROR;
     private final LoaderStyle LOADER_STYLE;
+    private static final Handler HANDLER = Latte.getHandler();
 
     public RequestCallbacks(IRequest request, ISuccess success, IFailure failure, IError error, LoaderStyle loaderStyle) {
         this.REQUEST = request;
@@ -57,8 +62,14 @@ public class RequestCallbacks implements Callback<String> {
     }
 
     private void stopLoading() {
+        final long delayed = Latte.getConfiguration(ConfigType.LOADER_DELAYED);
         if (LOADER_STYLE != null) {
-            LatteLoader.stopLoading();
+            HANDLER.postDelayed(new Runnable() {
+                @Override
+                public void run() {
+                    LatteLoader.stopLoading();
+                }
+            }, delayed);
         }
     }
 }

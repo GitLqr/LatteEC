@@ -1,0 +1,77 @@
+{
+  "code": 0,
+  "message": "OK",
+  "total": 100,
+  "page_size": 6,
+  "data": [
+    {
+      "goodsId": 1,
+      "spanSize": 4,
+      "banners": [
+        "http://img2.imgtn.bdimg.com/it/u=407083921,4123955225&fm=200&gp=0.jpg",
+        "http://img2.imgtn.bdimg.com/it/u=3471984706,3984301268&fm=200&gp=0.jpg",
+        "http://img1.imgtn.bdimg.com/it/u=724216182,877478731&fm=27&gp=0.jpg"
+      ]
+    },
+    {
+      "goodsId": 1,
+      "text": "明星单品",
+      "imageUrl": "http://img4.imgtn.bdimg.com/it/u=3256977034,4058877574&fm=27&gp=0.jpg",
+      "spanSize": 4
+    },
+    {
+      "goodsId": 2,
+      "text": "小米5c 64GB 移动版",
+      "imageUrl": "http://img4.imgtn.bdimg.com/it/u=2374233154,391083534&fm=27&gp=0.jpg",
+      "spanSize": 2
+    },
+    {
+      "goodsId": 3,
+      "text": "米家智能摄像机",
+      "imageUrl": "http://img0.imgtn.bdimg.com/it/u=2003657594,2958050000&fm=27&gp=0.jpg",
+      "spanSize": 2
+    },
+    {
+      "goodsId": 4,
+      "imageUrl": "http://img1.imgtn.bdimg.com/it/u=114269007,4257565088&fm=27&gp=0.jpg",
+      "spanSize": 2
+    },
+    {
+      "goodsId": 5,
+      "imageUrl": "http://img3.imgtn.bdimg.com/it/u=2338530376,180837833&fm=27&gp=0.jpg",
+      "spanSize": 2
+    },
+    {
+      "goodsId": 6,
+      "imageUrl": "http://img1.imgtn.bdimg.com/it/u=593303634,3972644651&fm=27&gp=0.jpg",
+      "spanSize": 2
+    },
+    {
+      "goodsId": 7,
+      "imageUrl": "http://img3.imgtn.bdimg.com/it/u=1683919755,4283430586&fm=27&gp=0.jpg",
+      "spanSize": 2
+    },
+    {
+      "goodsId": 5,
+      "text": "智能生活，从这里开始",
+      "spanSize": 4
+    },
+    {
+      "goodsId": 5,
+      "text": "测试描述5",
+      "imageUrl": "http://img3.imgtn.bdimg.com/it/u=195413603,4161676376&fm=200&gp=0.jpg",
+      "spanSize": 4
+    },
+    {
+      "goodsId": 6,
+      "text": "测试描述6",
+      "imageUrl": "http://img5.imgtn.bdimg.com/it/u=1536476737,971119474&fm=27&gp=0.jpg",
+      "spanSize": 4
+    },
+    {
+      "goodsId": 5,
+      "text": "我又是野广告",
+      "spanSize": 4
+    }
+  ]
+}

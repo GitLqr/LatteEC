@@ -21,8 +21,10 @@ public class ExampleApp extends Application {
         Latte.init(getApplicationContext())
                 .withIcon(new FontAwesomeModule()) // 具体字体图标到 https://fontawesome.com/ 查找
                 .withIcon(new FontEcModule())
+                .withLoaderDelayed(1000)
                 .withApiHost("http://127.0.0.1/")
-                .withInterceptor(new DebugInterceptor("index", R.raw.test))
+                .withInterceptor(new DebugInterceptor("user_profile.php", R.raw.user_profile))
+                .withInterceptor(new DebugInterceptor("index.php", R.raw.index_data))
                 .withInterceptor(new DebugInterceptor("sort_list.php", R.raw.sort_list))
                 .withInterceptor(new DebugInterceptor("sort_content_list.php", R.raw.sort_content_data_1))
                 .withWeChatAppId("")

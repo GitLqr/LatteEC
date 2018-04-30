@@ -49,6 +49,14 @@ public class Configurator {
     }
 
     /**
+     * 网络请求延时
+     */
+    public final Configurator withLoaderDelayed(long delayed) {
+        LATTE_CONFIGS.put(ConfigType.LOADER_DELAYED, delayed);
+        return this;
+    }
+
+    /**
      * 配置icon字体库（描述符）
      */
     public final Configurator withIcon(IconFontDescriptor descriptor) {

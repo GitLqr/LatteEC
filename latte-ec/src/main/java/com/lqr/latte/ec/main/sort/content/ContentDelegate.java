@@ -53,6 +53,7 @@ public class ContentDelegate extends LatteDelegate {
 
     private void initData() {
         RestClient.builder()
+                // TODO: 2018/4/30 暂不进行筛选
 //                .url("sort_content_list.php?contentId=" + mContentId)
                 .url("sort_content_list.php")
                 .onSuccess(new ISuccess() {
@@ -65,6 +66,7 @@ public class ContentDelegate extends LatteDelegate {
                         mRvListContent.setAdapter(sectionAdapter);
                     }
                 })
+                .loader(getContext())
                 .build()
                 .get();
         ;

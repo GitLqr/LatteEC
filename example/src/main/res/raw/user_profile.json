@@ -1,0 +1,11 @@
+{
+  "code": 0,
+  "message": "OK",
+  "data": {
+    "userId": 1,
+    "name": "lqr",
+    "avatar": "http://img0.imgtn.bdimg.com/it/u=134174995,4104022013&fm=27&gp=0.jpg",
+    "gender": "男",
+    "address": "西安"
+  }
+}
