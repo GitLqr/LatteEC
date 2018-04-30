@@ -1,6 +1,7 @@
 package com.lqr.latte.core.app;
 
 import android.app.Activity;
+import android.os.Handler;
 
 import com.joanzapata.iconify.IconFontDescriptor;
 import com.joanzapata.iconify.Iconify;
@@ -16,6 +17,7 @@ import okhttp3.Interceptor;
  */
 public class Configurator {
 
+    private static final Handler HANDLER = new Handler();
     private static final HashMap<Object, Object> LATTE_CONFIGS = new HashMap<>();
     private static final ArrayList<IconFontDescriptor> ICONS = new ArrayList<>();
     private static final ArrayList<Interceptor> INTERCEPTORS = new ArrayList<>();
@@ -23,6 +25,7 @@ public class Configurator {
     private Configurator() {
         // 默认标明配置未完成
         LATTE_CONFIGS.put(ConfigType.CONFIG_READY, false);
+        LATTE_CONFIGS.put(ConfigType.HANDLER, HANDLER);
     }
 
     // -------------------------- 使用静态内部类的方式创建线程安全的单例 begin --------------------------

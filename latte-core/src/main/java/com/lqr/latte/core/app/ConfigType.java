@@ -6,6 +6,7 @@ package com.lqr.latte.core.app;
  */
 public enum ConfigType {
     API_HOST, // 网络请求的 api host
+    HANDLER, // 全局Handler
     APPLICATION_CONTEXT, // 全局上下文
     ACTIVITY,// 全局Activity（该框架的设计理念是 1个Activity + n个Fragment，所以可以这样，但如果是多个Activity则需要重新考虑一下）
     CONFIG_READY, // 是否配置完毕标记
