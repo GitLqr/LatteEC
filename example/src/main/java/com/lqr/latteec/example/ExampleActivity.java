@@ -6,12 +6,15 @@ import android.support.v7.app.ActionBar;
 import android.widget.Toast;
 
 import com.lqr.latte.core.activities.ProxyActivity;
+import com.lqr.latte.core.app.Latte;
 import com.lqr.latte.core.delegates.LatteDelegate;
 import com.lqr.latte.ec.launcher.ILauncherListener;
-import com.lqr.latte.ec.launcher.LauncherDelegate;
 import com.lqr.latte.ec.launcher.OnLauncherFinishTag;
 import com.lqr.latte.ec.main.EcBottomDelegate;
 import com.lqr.latte.ec.sign.ISignListener;
+import com.lqr.latte.ec.sign.SignInDelegate;
+
+import qiu.niorgai.StatusBarCompat;
 
 public class ExampleActivity extends ProxyActivity implements ISignListener, ILauncherListener {
 
@@ -22,12 +25,15 @@ public class ExampleActivity extends ProxyActivity implements ISignListener, ILa
         if (actionBar != null) {
             actionBar.hide();
         }
+        Latte.getConfigurator().withActivity(this);
+        StatusBarCompat.translucentStatusBar(this, true);
     }
 
     @Override
     public LatteDelegate setRootDelegate() {
+        return new EcBottomDelegate();
 //        return new SignUpDelegate();
-        return new LauncherDelegate();
+//        return new LauncherDelegate();
 //        return new LauncherScrollDelegate();
     }
 
@@ -43,19 +49,18 @@ public class ExampleActivity extends ProxyActivity implements ISignListener, ILa
 
     @Override
     public void onLauncherFinish(OnLauncherFinishTag tag) {
-        startWithPop(new EcBottomDelegate());
-//        switch (tag) {
-//            case SIGNED:
-//                Toast.makeText(getApplicationContext(), "用户登录了", Toast.LENGTH_SHORT).show();
-//                startWithPop(new EcBottomDelegate());
-////                startWithPop(new ExampleDelegate());
-//                break;
-//            case NOT_SIGNED:
-//                Toast.makeText(getApplicationContext(), "用户还未登录", Toast.LENGTH_SHORT).show();
-//                startWithPop(new SignInDelegate());
-//                break;
-//            default:
-//                break;
-//        }
+        switch (tag) {
+            case SIGNED:
+                Toast.makeText(getApplicationContext(), "用户登录了", Toast.LENGTH_SHORT).show();
+                startWithPop(new EcBottomDelegate());
+//                startWithPop(new ExampleDelegate());
+                break;
+            case NOT_SIGNED:
+                Toast.makeText(getApplicationContext(), "用户还未登录", Toast.LENGTH_SHORT).show();
+                startWithPop(new SignInDelegate());
+                break;
+            default:
+                break;
+        }
     }
 }

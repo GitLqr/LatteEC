@@ -2,6 +2,7 @@ package com.lqr.latte.ec.main.index;
 
 import android.os.Bundle;
 import android.support.annotation.Nullable;
+import android.support.v4.content.ContextCompat;
 import android.support.v4.widget.SwipeRefreshLayout;
 import android.support.v7.widget.GridLayoutManager;
 import android.support.v7.widget.RecyclerView;
@@ -10,9 +11,11 @@ import android.view.View;
 
 import com.joanzapata.iconify.widget.IconTextView;
 import com.lqr.latte.core.delegates.bottom.BottomItemDelegate;
+import com.lqr.latte.core.ui.recycler.BaseDecoration;
 import com.lqr.latte.core.ui.refresh.RefreshHandler;
 import com.lqr.latte.ec.R;
 import com.lqr.latte.ec.R2;
+import com.lqr.latte.ec.main.EcBottomDelegate;
 
 import butterknife.BindView;
 
@@ -50,6 +53,9 @@ public class IndexDelegate extends BottomItemDelegate {
     private void initRecyclerView() {
         final GridLayoutManager manager = new GridLayoutManager(getContext(), 4);
         mRvIndex.setLayoutManager(manager);
+        mRvIndex.addItemDecoration(BaseDecoration.create(ContextCompat.getColor(getContext(), R.color.app_background), 5));
+        final EcBottomDelegate ecBottomDelegate = getParentDelegate();
+        mRvIndex.addOnItemTouchListener(IndexItemClickListener.create(ecBottomDelegate));
     }
 
     @Override
@@ -57,6 +63,7 @@ public class IndexDelegate extends BottomItemDelegate {
         super.onLazyInitView(savedInstanceState);
         initRefreshLayout();
         initRecyclerView();
+        mRefreshHandler.firstPage("index.php");
     }
 
     @Override

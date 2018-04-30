@@ -64,7 +64,7 @@ dependencies {
     // compile 'com.alibaba:fastjson:1.2.31' // java版
     compile 'com.alibaba:fastjson:1.1.57.android' // android版
     // ======================== Log ========================
-    compile 'com.orhanobut:logger:1.15'
+    compile 'com.orhanobut:logger:2.1.0'
     // ======================== GreenDao ========================
     compile 'org.greenrobot:greendao-generator:3.2.0'
     compile 'org.greenrobot:greendao:3.2.0'
@@ -73,7 +73,16 @@ dependencies {
     compile 'com.tencent.mm.opensdk:wechat-sdk-android-with-mta:+'
     // ======================== BaseRecyclerViewAdapterHelper ========================
     compile 'com.github.CymChad:BaseRecyclerViewAdapterHelper:2.9.38'
+    // ======================== RecyclerView 分割线 ========================
+    compile 'com.choices.divider:RecyclerView_Divider:1.0.0'
     // ======================== 图片处理：Glide ========================
     compile 'com.github.bumptech.glide:glide:3.7.0'
     compile 'com.github.bumptech.glide:okhttp3-integration:1.4.0@aar'
+    // ======================== 沉浸式状态栏 ========================
+    compile('com.github.niorgai:StatusBarCompat:2.1.4', {
+        exclude group: 'com.android.support'
+    })
+    // ======================== Google AutoValue ========================
+    provided 'com.google.auto.value:auto-value:1.2' // provided表示该库只在编译时依赖，故不会增大app体积
+    annotationProcessor "com.google.auto.value:auto-value:1.2"
 }
