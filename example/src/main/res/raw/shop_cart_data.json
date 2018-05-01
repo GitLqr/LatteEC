@@ -1,0 +1,22 @@
+{
+  "code": 0,
+  "message": "OK",
+  "data": [
+    {
+      "title": "商品标题1",
+      "desc": "商品的详细描述1",
+      "id": 1,
+      "price": 1.00,
+      "count": 2,
+      "thumb": "http://i8.mifile.cn/v1/a1/21da5518-d5c3-5de7-84b8-afca9446ef93.webp?width=720&height=720"
+    },
+    {
+      "title": "商品标题2",
+      "desc": "商品的详细描述2",
+      "id": 3,
+      "price": 3.00,
+      "count": 2,
+      "thumb": "http://i8.mifile.cn/v1/a1/T1SexQBgCT1RC2b46K.webp"
+    }
+  ]
+}
