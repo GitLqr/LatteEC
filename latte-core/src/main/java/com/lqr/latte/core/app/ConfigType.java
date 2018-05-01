@@ -15,4 +15,6 @@ public enum ConfigType {
     INTERCEPTOR, //拦截器
     WE_CHAT_APP_ID, // 微信平台 app_id
     WE_CHAT_APP_SECRET, // 微信平台 app_secret
+    JAVASCRIPT_INTERFACE,
+    WEB_HOST,
 }

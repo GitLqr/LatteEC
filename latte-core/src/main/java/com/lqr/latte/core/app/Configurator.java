@@ -5,8 +5,12 @@ import android.os.Handler;
 
 import com.joanzapata.iconify.IconFontDescriptor;
 import com.joanzapata.iconify.Iconify;
+import com.lqr.latte.core.delegates.web.event.Event;
+import com.lqr.latte.core.delegates.web.event.EventManager;
 import com.orhanobut.logger.AndroidLogAdapter;
 import com.orhanobut.logger.Logger;
+
+import org.greenrobot.greendao.annotation.NotNull;
 
 import java.util.ArrayList;
 import java.util.HashMap;
@@ -97,6 +101,31 @@ public class Configurator {
      */
     public final Configurator withActivity(Activity activity) {
         LATTE_CONFIGS.put(ConfigType.ACTIVITY, activity);
+        return this;
+    }
+
+    /**
+     * 配置web的域名（主要是用于获取cookie）
+     */
+    public final Configurator withWebHost(@NotNull String webHost) {
+        LATTE_CONFIGS.put(ConfigType.WEB_HOST, webHost);
+        return this;
+    }
+
+    /**
+     * 配置JavascriptInterface的注入名
+     */
+    public final Configurator withJavascriptInterface(@NotNull String name) {
+        LATTE_CONFIGS.put(ConfigType.JAVASCRIPT_INTERFACE, name);
+        return this;
+    }
+
+    /**
+     * 配置JavascriptInterface响应事件
+     */
+    public final Configurator withWebEvent(@NotNull String name, @NotNull Event event) {
+        final EventManager manager = EventManager.getInstance();
+        manager.addEvent(name, event);
         return this;
     }
 
