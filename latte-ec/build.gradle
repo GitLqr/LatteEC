@@ -30,4 +30,5 @@ dependencies {
     annotationProcessor 'com.jakewharton:butterknife-compiler:8.5.0'
     // 模块依赖
     compile project(':latte-core')
+    compile files('libs/alipaySdk-20161222.jar')
 }

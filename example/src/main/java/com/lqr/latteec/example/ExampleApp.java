@@ -31,6 +31,7 @@ public class ExampleApp extends Application {
                 .withInterceptor(new DebugInterceptor("sort_list.php", R.raw.sort_list))
                 .withInterceptor(new DebugInterceptor("sort_content_list.php", R.raw.sort_content_data_1))
                 .withInterceptor(new DebugInterceptor("shop_cart.php", R.raw.shop_cart_data))
+                .withInterceptor(new DebugInterceptor("shop_cart_count.php", R.raw.shop_cart_data))
                 .withWeChatAppId("wxfcdcecd9df8e0faa")
                 .withWeChatAppSecret("a0560f75335b06e3ebea70f29ff219bf")
                 .withWebHost("https://www.baidu.com/")
